@@ -10,6 +10,10 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 
+function getRandomCard(){
+    
+}
+
 function startGame(){
     renderGame()
 }
@@ -27,7 +31,10 @@ function renderGame(){
     
     messageEl.textContent = message
     sumEl.textContent = "Sum: " + sum
-    cardsEl.textContent = "Cards: " + cards[0] + " & "  + cards[1] 
+    cardsEl.textContent = "Cards: " 
+    for (let i = 0; i < cards.length; i++){
+        cardsEl.textContent += cards[i] + " "
+    }
 }
 
 function newCard(){
